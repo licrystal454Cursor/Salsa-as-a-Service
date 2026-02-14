@@ -18,7 +18,7 @@
         },
         "groups": [
           {
-            "group": "Start Here",
+            "group": "Get Started",
             "pages": [
               "v2/index",
               "v2/getting-started",
@@ -26,21 +26,31 @@
             ]
           },
           {
-            "group": "Guides",
+            "group": "Tools",
             "pages": [
               "v2/integrations",
               "v2/analytics",
               "v2/quality",
-              "v2/inventory",
+              "v2/inventory"
+            ]
+          },
+          {
+            "group": "Revenue",
+            "pages": [
               "v2/pricing"
             ]
           },
           {
-            "group": "Reference",
+            "group": "Developer Resources",
             "pages": [
-              "v2/api-reference",
               "v2/changelog",
               "v2/troubleshooting"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "v2/api-reference"
             ]
           },
           {

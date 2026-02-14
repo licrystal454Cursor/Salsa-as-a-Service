@@ -1,0 +1,165 @@
+# Task 1: Navigation Structure & Design Decisions
+
+This document explains the rationale behind the v2.0 documentation structure for Salsa as a Service.
+
+---
+
+## Decision-Making Process
+
+The structure was designed by first auditing what each page actually *does* for the reader, then grouping by **reader intent**  Two reference points shaped the final model:
+
+- **Stripe's docs** which put "Getting started" along with the different integration guides at the top while the developer resources are at the bottom. 
+- **Anthropic's docs** which had a section called "Tools" which I really liked
+
+From that analysis, I created my 5 categories: Get Started, Tools, Revenue, Developer Resources, API Reference, and Legacy V1. 
+
+---
+
+## Key User Experience Improvements
+
+**Get Started groups onboarding progressively.** Welcome → Getting Started → Advanced Usage follows a natural learning arc. A new user can read top-to-bottom and never feel lost, while a returning user can jump directly to Advanced Usage without wading through beginner material.
+
+**Tools consolidates the daily-use pages.** Integrations, Analytics, Quality Control, and Inventory are the features users interact with most often. Giving them a shared home signals that these are the product's core surface area — not scattered reference material.
+
+**Revenue is intentionally isolated.** Pricing answers a fundamentally different question than any other page (what does this cost?), and tends to be visited by a different audience at a different moment in the journey. Treating it as its own category avoids burying it and avoids inflating another category with an outlier.
+
+**Developer Resources and API Reference are separated.** Changelog and Troubleshooting serve a reactive need (something changed, something broke), while API Reference is a standalone technical spec consulted repeatedly during integration. Keeping them adjacent but distinct respects both use cases.
+
+---
+
+## Trade-offs Considered
+
+**Tools could be split further.** Analytics and Quality Control both have AI and IoT themes, while Integrations is more of a connectivity hub. A "AI & IoT Features" sub-grouping was considered but rejected — it adds a layer of nesting that slows navigation and assumes users already understand the AI/IoT distinction before they've used the product.
+
+**Advanced Usage lives in Get Started, not Developer Resources.** This was the most debated call. Advanced Usage covers AI forecasting, automation, and enterprise features — territory that feels technical. But its primary audience is power users who graduated through the onboarding flow, not developers integrating via API. Placing it in Get Started keeps the progression intact and avoids making non-developer power users feel like they've wandered into the wrong section.
+
+**Revenue only has one page.** A single-item category is a known documentation anti-pattern. It's justified here because Pricing is genuinely high-stakes and high-traffic — users make buying decisions based on it. Burying it inside another category would lower its discoverability at exactly the wrong moment.
+
+---
+
+## How This Structure Scales
+
+**New features slot cleanly into Tools.** As Salsa as a Service adds capabilities — new AI modules, additional IoT integrations, reporting dashboards — they have a clear home without requiring a structural redesign. Tools can grow to eight or ten pages before nesting becomes necessary.
+
+**Developer Resources absorbs release content naturally.** Migration guides, deprecation notices, and release notes all belong alongside Changelog without disrupting other categories.
+
+**A "Platform" or "Enterprise" category can be introduced later.** Once enterprise features (SSO, audit logs, admin controls) warrant their own documentation, they can be extracted from Advanced Usage into a dedicated section without moving anything else.
+
+**Version gating is already implicit.** The v2.0 suffix on most pages means a future v3.0 rollout can mirror this exact structure under a version selector — no category renaming required.
+
+
+# Task 2: Changed Components
+
+## Summary
+
+1. Enhanced v2 MDX files with improved component usage.
+2. Added a brief explanation of component choices:
+   - Why specific components were chosen for specific content.
+   - How the enhancements improve user experience.
+   - Any custom styling decisions and their rationale.
+
+## File Updates
+
+### File 1: `changelog.mdx`
+
+- Structured release history using reusable `<Update>` blocks:
+  - Monthly entries from **September 2023** through **March 2024**.
+  - Each update includes `label`, `description` (version), `tags`, and `rss` summary text.
+
+### File 2: `Integrations.mdx`
+
+- Updated redirects to point to the correct headers.
+- Added cards at the top and bottom.
+- Added tabs.
+- Added steps.
+- Added an accordion section at the bottom.
+
+## Component Details
+
+### 1. Cards (Top and Bottom)
+
+- **Top section: Integration Categories**
+  - Uses a 3-column layout with 6 cards:
+    - Point of Sale
+    - Supply Chain
+    - Kitchen Management
+    - Enterprise Systems
+    - Communication
+    - IoT & Hardware
+  - Each card links to a corresponding section via `href` anchors, so users can jump directly to relevant content.
+
+- **Bottom section: Integration Support**
+  - Uses a 2-column layout with 2 cards:
+    - Documentation
+    - Developer Portal
+  - Provides clear CTAs and links to API reference and developer portal resources.
+
+### 2. Tabs (`borderBottom` style)
+
+Several long integration lists were converted into tabs so users can view one option at a time:
+
+- **Popular POS Integrations**
+  - Square
+  - Toast
+  - Lightspeed
+  - TouchBistro
+  - Revel
+  - Clover
+- **Supply Chain & Distributors**
+  - Sysco
+  - US Foods
+  - Performance Food Group
+  - Gordon Food Service
+  - Local Suppliers
+- **Enterprise Systems (ERP)**
+  - SAP
+  - Oracle
+  - Microsoft Dynamics
+- **Team Communication**
+  - Slack
+  - Microsoft Teams
+  - SMS & Voice
+- **IoT & Hardware (Certified Hardware Partners)**
+  - Temperature Sensors
+  - Digital Scales
+  - Smart Thermometers
+- **Business Intelligence & Analytics**
+  - Tableau
+  - Power BI
+  - Looker
+
+`borderBottom` was added to each `<Tabs>` component so the content area has a bottom border and padding. For the BI section, tab content containing markdown lists was wrapped in a `<div>` to ensure MDX parses it correctly.
+
+### 3. Steps
+
+Under **Custom Integrations -> Integration Development**, a numbered list was replaced with a `Steps` component:
+
+1. Review Documentation
+2. Get API Credentials
+3. Use SDKs
+4. Test in Sandbox
+5. Deploy to Production
+
+This makes the integration flow clearly sequential and easier to follow.
+
+### 4. AccordionGroup
+
+- **Support Channels** and **Request New Integrations** were converted into an `AccordionGroup` with two accordion items.
+- Users can expand only the section they need, keeping the page shorter and more focused.
+
+## Why These Components Were Chosen
+
+- **Cards**: Act as a visual table of contents at the top and highlight next actions at the bottom.
+- **Tabs**: Improve scanability for long lists of similar integration options.
+- **Steps**: Match the fixed, sequential integration-development workflow.
+- **Accordions**: Keep secondary support/reference content compact and optional.
+
+## UX Improvements
+
+- A consistent release structure that let users quickly compare versions and find 
+  relevant changes in the changeLogs
+- Faster navigation through top-level category cards.
+- Clear next actions through support cards at the bottom.
+- Less scrolling and reduced visual clutter via tabs.
+- Better process clarity with a sequential `Steps` flow.
+- Cleaner page structure by collapsing secondary information into accordions.
