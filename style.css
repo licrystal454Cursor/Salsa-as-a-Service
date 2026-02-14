@@ -1,0 +1,5 @@
+/* Stabilize tab content height so layout doesn't jump when switching tabs.
+   Mintlify selectors: Tabs = "tabs", Tab = "tab", TabsBar = "nav-tabs". */
+.tabs .tab {
+  min-height: 20rem;
+}

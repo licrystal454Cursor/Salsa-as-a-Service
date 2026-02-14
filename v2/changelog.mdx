@@ -1,0 +1,379 @@
+---
+title: "Changelog"
+description: "Product updates and announcements for Salsa as a Service v2"
+rss: true
+---
+
+# Changelog
+
+Product updates, improvements, and fixes for Salsa as a Service v2.
+
+<Note>
+  **Current Version**: v2.5.0 | **Release Date**: March 15, 2024
+</Note>
+
+<Update label="March 2024" description="v2.5.0" tags={["Release", "API", "AI", "IoT", "Performance", "Fixes"]} rss="v2.5.0 introduced GraphQL, enhanced AI forecasting, IoT Sensor Hub v2, major performance upgrades, and important bug fixes.">
+  ## Major New Features
+
+  ### GraphQL API Launch
+  - **GraphQL Endpoint**: New flexible query language for advanced integrations
+  - **Real-Time Subscriptions**: WebSocket-based subscriptions for live data updates
+  - **Schema Introspection**: Self-documenting API with built-in schema explorer
+  - **Query Optimization**: Automatic query optimization and batching
+
+  ### Enhanced AI Forecasting v2
+  - **Multi-Model Ensemble**: Combines 5 ML models for 98% accuracy
+  - **Contextual Forecasting**: Incorporates local events, weather, social trends
+  - **Confidence Intervals**: Statistical confidence ranges for all predictions
+  - **What-If Analysis**: Simulate different scenarios and their impact on demand
+
+  ### IoT Sensor Hub v2
+  - **Edge Computing**: On-device processing for faster response times
+  - **Mesh Networking**: Sensors communicate directly for improved reliability
+  - **Predictive Maintenance**: AI predicts equipment failures 14 days in advance
+  - **Visual Inspection AI**: Computer vision for automated quality inspection
+
+  ## Major Improvements
+
+  - **Performance**: 65% faster API response times with new caching layer
+  - **Mobile App**: Complete redesign with offline-first architecture
+  - **Security**: Added FIDO2/WebAuthn support for passwordless authentication
+  - **Integrations**: Added 15 new integration partners (total now 65+)
+  - **Dashboard**: Redesigned dashboard with customizable widgets and layouts
+
+  ## Bug Fixes
+
+  - Fixed rare race condition in multi-location inventory sync
+  - Resolved GraphQL subscription memory leak
+  - Corrected timezone handling in forecast calculations
+  - Fixed CSV export formatting for international number formats
+</Update>
+
+<Update label="February 2024" description="v2.4.5" tags={["Improvement", "Enterprise", "AI", "Fixes"]} rss="v2.4.5 expanded enterprise controls, improved automation capabilities, and resolved integration and mobile issues.">
+  ## Improvements
+
+  ### Enterprise Features
+  - **Custom Domain**: Enterprise customers can now use custom domains (docs.yourcompany.com)
+  - **Advanced Audit Logs**: Enhanced logging with 2-year retention
+  - **IP Allowlisting**: Restrict access by IP address ranges
+  - **Data Residency**: Choose data storage region (US, EU, APAC)
+
+  ### AI and Automation
+  - **Recipe Optimization AI**: Suggests cost-saving ingredient substitutions
+  - **Waste Reduction AI**: Identifies waste patterns and prevention strategies
+  - **Smart Scheduling**: AI optimizes production schedules for efficiency
+  - **Allergen Detection**: Automated allergen tracking and warnings
+
+  ## Bug Fixes
+
+  - Fixed issue with SAP ERP integration authentication
+  - Resolved mobile app crash when viewing large production histories
+  - Corrected calculation errors in cost allocation reports
+  - Fixed webhook delivery failures for certain event types
+</Update>
+
+<Update label="January 2024" description="v2.4.0" tags={["Feature", "Analytics", "Mobile", "Inventory", "Fixes"]} rss="v2.4.0 added advanced analytics, mobile enhancements, smart inventory workflows, and stability fixes.">
+  ## New Features
+
+  ### Advanced Analytics Dashboard
+  - Predictive analytics for demand forecasting using historical data, weather, and local events
+  - Custom report builder with drag-and-drop configuration
+  - Real-time performance metrics for production, waste, and quality
+  - Comparative analytics for recipes and production methods
+
+  ### Enhanced Mobile Experience
+  - Offline mode for key workflows
+  - Barcode scanning for faster ingredient entry
+  - Voice commands for hands-free operation
+  - Push notifications for low stock, quality issues, and milestones
+
+  ### Smart Inventory Management
+  - Automated reordering based on stock levels
+  - Supplier integrations for streamlined purchasing
+  - Expiry tracking with proactive alerts
+  - Cost optimization recommendations
+
+  ## Improvements
+
+  - **Performance**: 40% faster page load times across all platforms
+  - **API**: Enhanced API with new endpoints for advanced integrations
+  - **Security**: Upgraded encryption and added two-factor authentication
+  - **Accessibility**: Improved screen reader support and keyboard navigation
+
+  ## Bug Fixes
+
+  - Fixed issue where production batches were not syncing with POS systems
+  - Resolved mobile app crashes on iOS 17.2
+  - Fixed inventory count discrepancies in multi-location accounts
+  - Corrected quality score calculations for certain recipe types
+</Update>
+
+<Update label="December 2023" description="v2.3.2" tags={["Improvement", "Integrations", "UX", "Fixes"]} rss="v2.3.2 improved POS integrations and user experience while addressing authentication and reporting bugs.">
+  ## Improvements
+
+  ### Integration Enhancements
+  - **Square POS**: Improved sync reliability and latest API support
+  - **Toast Integration**: Enhanced data mapping for complex menu structures
+  - **Clover App**: Updated for new marketplace requirements
+
+  ### User Experience
+  - **Dashboard Redesign**: Cleaner interface with customizable widgets
+  - **Mobile App**: Better navigation and gesture support
+  - **Search Functionality**: Enhanced search with filters and suggestions
+
+  ## Bug Fixes
+
+  - Fixed authentication issues with certain enterprise SSO configurations
+  - Resolved data export formatting problems in Excel files
+  - Fixed notification delivery issues for some email providers
+  - Corrected timezone handling in production reports
+</Update>
+
+<Update label="December 2023" description="v2.3.1" tags={["Improvement", "Performance", "Security", "Fixes"]} rss="v2.3.1 focused on performance, caching, and security hardening with multiple bug fixes.">
+  ## Improvements
+
+  ### Performance Optimizations
+  - **Database**: Optimized queries for faster data retrieval
+  - **Caching**: Improved caching strategy for better performance
+  - **API**: Reduced API response times by 25%
+
+  ### Security Updates
+  - **SSL/TLS**: Upgraded to latest security protocols
+  - **Data Encryption**: Enhanced encryption for sensitive data
+  - **Access Control**: Improved permission management
+
+  ## Bug Fixes
+
+  - Fixed issue where some users could not access their accounts after password reset
+  - Resolved mobile app login problems on Android devices
+  - Fixed inventory sync issues with certain POS systems
+  - Corrected calculation errors in waste tracking reports
+</Update>
+
+<Update label="November 2023" description="v2.3.0" tags={["Release", "Feature", "Quality", "Collaboration", "Fixes"]} rss="v2.3.0 introduced multi-location controls, advanced quality workflows, and team collaboration tools.">
+  ## New Features
+
+  ### Multi-Location Management
+  - Centralized dashboard for all locations
+  - Location-specific settings and controls
+  - Cross-location analytics and unified reporting
+
+  ### Advanced Quality Control
+  - Automated testing with IoT sensor integration
+  - Quality alerts and threshold monitoring
+  - End-to-end batch traceability
+  - Compliance reporting automation
+
+  ### Team Collaboration
+  - Role-based permissions
+  - Task assignment with due dates
+  - Built-in team messaging
+  - Interactive training modules
+
+  ## Improvements
+
+  - **User Interface**: Redesigned navigation and improved user experience
+  - **Data Export**: Enhanced export options with custom formatting
+  - **Integration**: Improved reliability of third-party integrations
+  - **Mobile App**: Better offline functionality and sync capabilities
+
+  ## Bug Fixes
+
+  - Fixed issue where production data was not saving correctly
+  - Resolved problems with ingredient unit conversions
+  - Fixed notification delivery issues
+  - Corrected calculation errors in cost analysis reports
+</Update>
+
+<Update label="October 2023" description="v2.2.1" tags={["Improvement", "API", "Performance", "Fixes"]} rss="v2.2.1 shipped API enhancements, better rate limiting, and reliability improvements.">
+  ## Improvements
+
+  ### API Enhancements
+  - New endpoints for advanced analytics and reporting
+  - Improved rate limiting with clearer error messaging
+  - Expanded API documentation with more examples
+
+  ### Performance
+  - Optimized database queries
+  - Improved caching for frequently accessed data
+  - Enhanced CDN delivery
+
+  ## Bug Fixes
+
+  - Fixed issue where some users experienced slow loading times
+  - Resolved data synchronization issues
+  - Fixed mobile app crashes on certain devices
+  - Corrected email notification issues
+</Update>
+
+<Update label="October 2023" description="v2.2.0" tags={["Release", "Feature", "AI", "Integrations", "Mobile", "Fixes"]} rss="v2.2.0 added AI-powered insights, broader integrations, and mobile workflow improvements.">
+  ## New Features
+
+  ### AI-Powered Insights
+  - Demand forecasting based on historical trends
+  - Quality optimization recommendations
+  - Intelligent cost analysis and reduction guidance
+  - Trend analysis for preferences and efficiency
+
+  ### Enhanced Integrations
+  - Added support for Revel, TouchBistro, and Lightspeed
+  - Supply chain integration with major food distributors
+  - Accounting integrations including QuickBooks and Xero
+  - BI integrations including Tableau and Power BI
+
+  ### Mobile App Improvements
+  - Full offline workflows
+  - Barcode scanning support
+  - Voice notes for production and quality records
+  - Photo documentation for operations
+
+  ## Improvements
+
+  - **User Experience**: Streamlined interface and navigation
+  - **Performance**: 30% faster loading times across platforms
+  - **Security**: Enhanced security measures and data protection
+  - **Accessibility**: Improved accessibility features
+
+  ## Bug Fixes
+
+  - Fixed issue where inventory counts were incorrect after POS sync
+  - Resolved recipe scaling calculation problems
+  - Fixed mobile app crashes on iOS devices
+  - Corrected data export formatting issues
+</Update>
+
+<Update label="September 2023" description="v2.1.3" tags={["Improvement", "Performance", "Security", "Fixes"]} rss="v2.1.3 delivered reliability and performance updates with critical bug fixes.">
+  ## Improvements
+
+  ### Bug Fixes and Performance
+  - **Data Sync**: Improved reliability with POS synchronization
+  - **Mobile App**: Better crash resilience and app stability
+  - **Performance**: Optimized database queries
+  - **Security**: Updated security protocols and encryption
+
+  ## Bug Fixes
+
+  - Fixed issue where some users could not access their accounts
+  - Resolved problems with inventory tracking
+  - Fixed notification delivery issues
+  - Corrected calculation errors in reports
+</Update>
+
+<Update label="September 2023" description="v2.1.2" tags={["Improvement", "Integrations", "UX", "Fixes"]} rss="v2.1.2 refreshed POS integrations and improved dashboard, notifications, and mobile syncing.">
+  ## Improvements
+
+  ### Integration Updates
+  - **Square POS**: Updated for latest API changes
+  - **Toast Integration**: Enhanced data mapping and sync reliability
+  - **Clover App**: Updated to meet new app requirements
+
+  ### User Experience
+  - **Dashboard**: Improved loading times and interface responsiveness
+  - **Mobile App**: Better offline functionality and sync
+  - **Notifications**: Improved delivery reliability
+
+  ## Bug Fixes
+
+  - Fixed issue where production batches were not saving correctly
+  - Resolved ingredient tracking problems
+  - Fixed mobile app login issues
+  - Corrected data export issues
+</Update>
+
+<Update label="August 2023" description="v2.1.1" tags={["Improvement", "Performance", "API", "Fixes"]} rss="v2.1.1 improved stability, query speed, API reliability, and security baselines.">
+  ## Improvements
+
+  ### Performance and Stability
+  - **Database**: Optimized for faster queries
+  - **API**: Improved response times and reliability
+  - **Mobile App**: Enhanced stability and performance
+  - **Security**: Updated protection controls
+
+  ## Bug Fixes
+
+  - Fixed issue where some users experienced data loss
+  - Resolved POS integration issues
+  - Fixed mobile app crashes
+  - Corrected analytics calculation errors
+</Update>
+
+<Update label="August 2023" description="v2.1.0" tags={["Release", "Feature", "Analytics", "Quality", "Team", "Fixes"]} rss="v2.1.0 launched advanced analytics, quality scoring workflows, and improved team management features.">
+  ## New Features
+
+  ### Advanced Analytics
+  - Custom dashboards and metrics selection
+  - Trend analysis for production and quality
+  - Comparative period reporting
+  - Expanded export formats
+
+  ### Quality Management
+  - Advanced quality scoring
+  - End-to-end batch traceability
+  - Automated quality alerts
+  - Compliance reporting tools
+
+  ### Team Management
+  - Granular user roles and permissions
+  - Task assignment and tracking
+  - Team communication workflows
+  - New-user training modules
+
+  ## Improvements
+
+  - **User Interface**: Redesigned interface and navigation
+  - **Performance**: Faster page loading and interactions
+  - **Mobile App**: Enhanced mobile experience
+  - **Integrations**: Improved third-party integration reliability
+
+  ## Bug Fixes
+
+  - Fixed issue where inventory data was not syncing correctly
+  - Resolved recipe management problems
+  - Fixed mobile app crashes on certain devices
+  - Corrected data export issues
+</Update>
+
+<Update label="July 2023" description="v2.0.0" tags={["Major Release", "AI", "IoT", "Enterprise", "API", "Mobile"]} rss="v2.0.0 was a major platform release introducing AI intelligence, IoT integration, and enterprise-grade architecture.">
+  ## Major Release: Salsa as a Service v2.0
+
+  The biggest update in our platform history introduced AI-powered intelligence, IoT integration, and enterprise-grade operational controls.
+
+  <Warning>
+    **Breaking Changes**: v2.0 introduced new API endpoints and authentication methods. See our [Migration Guide](https://docs.salsaasaservice.com/migration/v1-to-v2) for details.
+  </Warning>
+
+  ### AI-Powered Features
+  - Demand forecasting engine for 7-30 day projections
+  - Quality prediction AI with anomaly detection
+  - Cost optimization AI for waste reduction and purchasing guidance
+
+  ### IoT Sensor Integration
+  - Real-time temperature, humidity, RFID, and vision-based monitoring
+  - Predictive maintenance with proactive failure alerts
+
+  ### Enterprise Features
+  - Multi-location management with centralized controls
+  - SSO, MFA, RBAC, and compliance-focused security workflows
+  - Audit and compliance reporting automation
+
+  ### Expanded Integrations
+  - 50+ pre-built integrations across POS, ERP, accounting, and communications
+  - Developer platform with REST API, webhooks, SDKs, and sandbox
+
+  ### Mobile App v2.0
+  - Offline-first architecture with automatic sync
+  - Voice, AR-assisted setup, and barcode/QR support
+
+  ### Platform Redesign and Performance
+  - Modern UI with responsive design and customizable dashboards
+  - Significant speed and scalability improvements
+
+  ### Migration and Enablement
+  - Zero-downtime migration tooling and validation support
+  - Typical migration windows: 1-4 weeks, depending on account size
+  - v1.0 support available through December 31, 2025
+
+  <Note>
+    **v2.0 Launch Offer**: Existing v1.0 customers receive 3 months free when upgrading to v2.0 Pro or Enterprise plans.
+  </Note>
+</Update>
